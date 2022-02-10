@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 75px;*/
+    height: 6%;
+    margin: auto;
+    background: #687D19;
+    align-items: center;
+    opacity: 0.9;
+}
+
+.icon{
+    width: 20%;
+    height: 90%;
+}
+
+.logo{
+    font-family: 'Syne Tactile', cursive;
+    font-size: 30px;
+    position: absolute;
+    top: 22%;
+    left: 3.8%;
+    color: white;
+}
+
+.iconz{
+    height: 90%;
+    width: 5%;
+    position: absolute;
+    top: 0;
+}
+
+.iconx{
+    height: 100%;
+    width: 100%;
+}
+
+.menu{
+    height: 90%;
+    position: absolute;
+    top: 0%;
+    right: 3%;
+    display: flex;
+}
+
+.menu ul{
+    padding-top: 10%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li{
+    padding-top: 0;
+    list-style: none;
+    margin-left: 50%;
+    margin-top: 30%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.back{
+    background: white;
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    height: 94%;
+    opacity: 0.4;
+}
+
+.content{
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    height: 94%;
+}
+
+.info{
+    position: absolute;
+    top: 24%;
+    left: 7%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.info h1{
+    font-size: 48px;
+}
+
+.login{
+    width: 15%;
+    height: 40%;
+    background: #687D19;
+    /*background: #C5E56C;*/
+    /*background: #29D0EC;*/
+    /*background: #02122D;*/
+    /*background: #AEE7B8;*/
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    border-radius: 15px;
+    opacity: 0.9;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.login h2{
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 28px;
+    color: white;
+    padding: 2px;
+    margin: 8px;
+}
+
+.login_text_field{
+    border-bottom: 1px solid #C5E56C;
+    width: 80%;
+    height: 15%;
+    margin-top: 30px;
+    color: white;
+    position:relative;
+    left: 8%;
+}
+
+.login_text_field input{
+    width: 100%;
+    background: transparent;
+    letter-spacing: 1px;
+    color: white;
+}
+
+::placeholder{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn{
+    background: #C5E56C;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    border-radius: 15px;
+    width: 30%;
+    height: 7%;
+}
+
+.btn:hover{
+    background: #687D19;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn a:hover{
+    color: black;
+}
