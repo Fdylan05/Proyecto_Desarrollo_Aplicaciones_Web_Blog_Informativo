@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
---><!--
-aaaaa
--->
+
 <html>
-    <head>
+    <head th:replace="plantilla/template::head">
         <title>TODO supply a title</title>
-        <!--<meta charset="UTF-8">-->
+
         <link rel="stylesheet" href="css/home.css"/>
     </head>
     <body>
         <div class="container">
-            <div class="navbar">
+<!--            <div class="navbar">
                 <div class="icon">
                     <a class="iconz" href=""><img class="iconx" src="images/logo login.png"></a>
                     <h2 class="logo">ProjectZ</h2>
@@ -34,7 +29,7 @@ aaaaa
                         <li>|</li>
                         <li><a href="">About</a></li>
                     </ul>
-                </div>
+                </div>-->
             </div>
             <div class="info">
                 <section class="slices">
@@ -69,5 +64,7 @@ aaaaa
                 </section>
             </div>
         </div>
+        <footer th:replace="plantilla/template::footer">
+        </footer>
     </body>
 </html>

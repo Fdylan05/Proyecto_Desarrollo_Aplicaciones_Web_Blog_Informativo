@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <head th:replace="plantilla/template::head">
         <title>Montaña</title>
         <link rel="stylesheet" href="css/mountain.css">
     </head>
     <body>
         <!-- contenido -->
         <!--<div class="conteiner">-->
-        <!-- nav bar -->
+        <!-- nav bar 
         <div class="navbartop">
-            <!-- aÃ±adir logo, cuando haya uno  -->
+            <!-- aÃ±adir logo, cuando haya uno  
             <nav>
 
                 <ul>
@@ -65,7 +65,8 @@
 
 
 
-        <!--   </div> <!-- fin del contenido -->
+        <footer th:replace="plantilla/template::footer">
+        </footer>
 
     </body>
 </html>

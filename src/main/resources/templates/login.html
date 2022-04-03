@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+    <head th:replace="plantilla/template::head">
         <title>Welcome to our Porject</title>
        <!-- <meta charset="UTF-8">-->
         <link rel="stylesheet" href="css/login.css"/>
@@ -11,7 +11,7 @@
             <video autoplay muted loop>
                 <source src="videos/back.mp4" type="video/mp4">
             </video>
-            <div class="navbar">
+            <!--<div class="navbar">
                 <div class="icon">
                     <a class="iconz" href=""><img class="iconx" src="images/logo login.png"></a>
                     <h2 class="logo">ProjectZ</h2>
@@ -22,7 +22,7 @@
                         <li><a href="">About</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
             <div class="back">
 
             </div>
@@ -48,5 +48,7 @@
                 </div>
             </div>
         </div>
+        <footer th:replace="plantilla/template::footer">
+        </footer>
     </body>
 </html>
