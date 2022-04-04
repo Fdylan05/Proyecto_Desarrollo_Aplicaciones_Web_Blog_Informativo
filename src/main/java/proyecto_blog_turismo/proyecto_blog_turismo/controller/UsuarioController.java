@@ -4,7 +4,6 @@
  */
 package proyecto_blog_turismo.proyecto_blog_turismo.controller;
 
-
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,22 +28,31 @@ public class UsuarioController {
         model.addAttribute("usuarios", listaUsuarios);
         return "usuarios";
     }
-    
+
     @GetMapping("/signup")
-    public String crearUsuario(Model model){
+    public String crearUsuario(Model model) {
         model.addAttribute("usuario", new Usuario());
         return "signup";
     }
-    
+
     @PostMapping("/save")
-    public String guardarUsuario(@ModelAttribute Usuario usuario){
+    public String guardarUsuario(@ModelAttribute Usuario usuario) {
         usuarioService.saveUser(usuario);
         return "redirect:/";
     }
-    
+
     @GetMapping("/delete/{id}")
-    public String eliminarUsuario(@PathVariable("id") Long idUsuario){
+    public String eliminarUsuario(@PathVariable("id") Long idUsuario) {
         usuarioService.delete(idUsuario);
         return "redirect:/usuarios";
     }
+
 }
+//    @GetMapping ("/editUsuario/{id}")
+//    public String editarUsuario(@PathVariable("id") Long idUsuario, Model model){
+//        Usuario u = UsuarioService.getPersonaById(idPersona);
+//        List<Usuario> listaUsuario = UsuarioService.listNombre();
+//        model.addAttribute("usuario", u);
+//        model.addAttribute("nombre", listaUsuario);
+//        return "crear";
+//    }
