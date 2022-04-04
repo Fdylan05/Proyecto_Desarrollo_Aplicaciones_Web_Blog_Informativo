@@ -1,0 +1,117 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 4 abr 2022, 17:38:30
+    Author     : Personal
+*/@import url("https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    margin: 0;
+}
+.navbar{
+    align-items: center;
+    
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: #37782c;
+    
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    align-items: center;
+
+}
+.navbar ul li{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 50px 0px ;
+    width: 50%;
+
+}
+
+.navbar ul li a {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.navbar ul li a{
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+
+}
+.navbar ul li a:hover{
+    background-color: #1f361b;
+    border-radius: 25px;
+    
+}
+
+.navbar ul li h2{
+    margin: 0px;
+}
+
+.iconx{
+    margin: 0px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+.galería {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(370px, 370px));
+    column-gap: 25px;
+    row-gap: 25px;
+    }
+.imgGalería {
+    width: 370px;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.logo {
+    font-family: "Syne Tactile", cursive;
+    font-size: 30px;
+    color: white;
+  }
+
+#tituloPag{
+    font-family: 'Roboto', sans-serif;
+    margin: 50px 50px 50px 150px;
+    font-size: 270%;
+    font-weight: 400;
+  }
+
+
+
+
+
+
+
+  
+
