@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+    
+    
+}
+
+.navbar {
+
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  height: 6%;
+  margin: auto;
+  background: #687d19;
+  align-items: center;
+  opacity: 1;
+}
+
+.icon {
+  width: 20%;
+  height: 90%;
+}
+
+.logo {
+  font-family: "Syne Tactile", cursive;
+  font-size: 30px;
+  position: absolute;
+  top: 22%;
+  left: 3.8%;
+  color: white;
+}
+
+.iconz {
+  height: 90%;
+  width: 5%;
+  position: absolute;
+  top: 0;
+}
+
+.iconx {
+  height: 100%;
+  width: 100%;
+}
+
+.menu {
+  height: 90%;
+  width: 60%;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  display: flex;
+}
+
+.menu ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul li {
+  padding-top: 0;
+  list-style: none;
+  margin-left: 10%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu ul li ul {
+  display: none;
+}
+
+.menu ul li ul:hover {
+  display: block;
+}
+
+.split {
+    
+    position: absolute;
+    text-align: center;
+    height: 94%;
+    width: 50%;
+    z-index: 1;
+    top: 6%;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+
+.left {
+    left: 0;
+    background-color: #024064;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  .left h2{
+    color: white;
+    margin-top: 18px;
+    font-size: 40px;
+}
+.left h4{
+    color: white;
+    font-size: 20px;
+    margin-top: 18px;
+}
+.left a{
+    color: white;
+    font-size: 20px;
+    margin-top: 18px;
+}
+
+.lugarYFotos{
+
+  align-items: center;
+}
+.lugarYFotos a{
+    margin-left:150px;
+    margin-right: 150px;
+    margin-bottom: 50;
+}
+.dato a{
+    
+    margin-left:200px;
+    margin-right: 170px;
+}
+.right {
+    right: 0;
+    background-color: white;
+  }
+
+.right img{
+    margin: 20px;
+    border-radius: 5%;
+}
+
+.row{
+    display: flex;
+}
+
+.col {
+
+    display: flex;
+
+}
+
+
+.pp {
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px solid #4066e6;
+
+
+
+}
+
+.bandera{
+
+    margin-top: 24px;
+    height: 20px;
+
+}
+/*A ver si así si se sube el css*/

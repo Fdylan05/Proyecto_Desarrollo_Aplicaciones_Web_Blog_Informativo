@@ -14,4 +14,24 @@ public class LoginController {
     public String index() {
         return "login";
     }
+    
+    @GetMapping("/perfil")
+    public String perfil() {
+        return "perfil";
+    }
+    
+    @GetMapping("/inicio")
+    public String home() {
+        return "home";
+    } 
+    
+    @GetMapping("/playa")
+    public String playa() {
+        return "playa";
+    }
+    
+    @GetMapping("/perfilP")
+    public String perfilP() {
+        return "perfilPrueba";
+    }
 }

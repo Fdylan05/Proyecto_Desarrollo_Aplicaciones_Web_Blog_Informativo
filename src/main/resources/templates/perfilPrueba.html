@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/perfil.css"/>
+          
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div class="icon">
+                    <a class="iconz" href="home.html"
+                       ><img class="iconx" src="/images/logo.png" alt="Acávaellogo"
+                          /></a>
+                    <h2 class="logo">ProjectZ</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Zones</a></li>
+                        <li><a href="">Localities</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="split left">
+                <div class="ContPP">
+                    <img class="pp" src="/images/logo.png" alt="Avatar" />
+                    <h2>Nombre Apellido</h2>
+                    <h4>Love outdoors</h4>
+                    <div></div>
+                    <img class="bandera" src="/images/bandera.png" alt="Avatar" />
+                </div>
+                <div class = lugarYFotos>
+                    <a>Places Visited</a>
+                    <a>Images</a>
+                </div>
+                <div class = dato>
+                    <a>15</a>
+                    <a>5</a>
+                </div>
+            </div>
+
+            <div class="split right">
+                <div class="row">
+                    <div class="col">
+                        <img src="images/10-Ciudades-de-Costa-Rica-Imprescindibles.jpg"
+                             alt="imagen" width="300">
+                             </div>
+                             <div class="col">
+                        <img
+                            src="images/mejores-playas-de-costa-rica-manzanillo-puerto-viejo.jpg"
+                            alt="imagen" width="300">
+                            </div>
+                            <div class="col">
+                        <img
+                            src="images/Los-Mejores-Lugares-de-Montana-de-Costa-Rica.jpg"
+                            alt="imagen"
+                            width="300"
+                            />
+                    </div>
+                </div>
+                <div class="col-md-8" style="overflow-y:scroll;height:600px;">
+                            <th:block th:each="imagen : ${imagen}">
+                                <div class="card-body">
+                                <a th:href="@{/verComentarios/{url}(url=playa-uvita.jpg)}"><img id="pruebaimg" th:src="${imagen.getUrl}"></a>
+                                    <input id="pruebaimgv" type="hidden" th:value="${imagen.getUrl}">
+                            </div>
+                                </th:block>
+                        </div>
+
+            </div>
+        </div>
+    </body>
+</html>

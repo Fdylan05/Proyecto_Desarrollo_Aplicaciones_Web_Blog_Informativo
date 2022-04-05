@@ -16,7 +16,7 @@ import javax.persistence.Table;
 public class Usuario implements Serializable{
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id_usuario;
     private String tipo_usuario;
     private String username;
     private String nombre;
@@ -26,12 +26,12 @@ public class Usuario implements Serializable{
     private String correo_electronico;
     private String contrasena;
 
-    public long getId() {
-        return id;
+    public long getId_usuario() {
+        return id_usuario;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId_usuario(long id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     public String getTipo_usuario() {

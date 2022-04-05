@@ -11,7 +11,7 @@
 	<groupId>proyecto_blog_turismo</groupId>
 	<artifactId>proyecto_blog_turismo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-        <name>proyecto_blog_turismo</name>
+        <name>proyecto_blog_turismo_old</name>
         <description>Proyecto blog turismo</description>
         <properties>
             <java.version>17</java.version>
