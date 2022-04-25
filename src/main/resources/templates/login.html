@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-    <!--<head th:replace="plantilla/template::head">-->
-        <title>Welcome to our Porject</title>
+    <head><!--<head th:replace="plantilla/template::head">-->
+        <title>Turistear</title>
        <!-- <meta charset="UTF-8">-->
         <link rel="stylesheet" href="css/login.css"/>
     </head>
@@ -13,12 +13,10 @@
             </video>
             <div class="navbar">
                 <div class="icon">
-                    <a class="iconz" href=""><img class="iconx" src="images/logo login.png"></a>
-                    <h2 class="logo">ProjectZ</h2>
+                    <h2 class="logo">Turistear</h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="">Home</a></li>
                         <li><a href="">About</a></li>
                     </ul>
                 </div>
@@ -28,17 +26,17 @@
             </div>
             <div class="content">
                 <div class="info">
-                    <h1>Welcome to our amazing Website</h1>
-                    <p>You will discover the amazing world of the turism.</p>
+                    <h1>Bienvenido a este grandioso blog</h1>
+                    <p>Descubriras el sorprendente mundo del turismo.</p>
                 </div>
                 <div class="login">
-                    <form method="post">
+                    <form th:action="@{/login}" method="post">
                         <h2>Login Here</h2>
                         <div class="login_text_field">                        
-                            <input type="email" name="email" placeholder="Enter your email">
+                            <input type="text" name="username" placeholder="Ingrese su usuario">
                         </div>
                         <div class="login_text_field">                        
-                            <input type="password" name="password" placeholder="Enter your password">
+                            <input type="password" name="password" placeholder="Ingrese su contraseña">
                         </div>
                         <button class="btn"><a href="">Login</a></button>
                         <div class="singup_link">
@@ -49,6 +47,6 @@
             </div>
         </div>
         <!--<footer th:replace="plantilla/template::footer">-->
-        </footer>
+<!--        </footer>-->
     </body>
 </html>

@@ -5,37 +5,50 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 --><!--
 aaaaa
 -->
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head>
         <title>TODO supply a title</title>
         <!--<meta charset="UTF-8">-->
         <link rel="stylesheet" href="css/home.css"/>
     </head>
     <body>
+        <nav class="navbar">
+                <ul>
+                    <li><a href="">Turistear</a></li>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/Zonas">Zonas</a></li>
+                    <li><a href="">Localidades</a></li>
+                    <li><a href="">Acerca</a></li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="">Admin</a></li>
+                    <li><a href="/perfilP">Perfil</a></li>
+                </ul>
+            </nav>
         <div class="container">
-            <div class="navbar">
-                <div class="icon">
-                    <a class="iconz" href=""><img class="iconx" src="images/logo login.png"></a>
-                    <h2 class="logo">ProjectZ</h2>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li>|</li>
-                        <li><a href="">Zonas</a>
-                            <ul>
-                                <li><a href="">Playas</a></li>
-                                <li><a href="">Montañas</a></li>
-                                <li><a href="">Ciudades</a></li>
-                            </ul>
-                        </li>
-                        <li>|</li>
-                        <li><a href="">Localidades</a></li>
-                        <li>|</li>
-                        <li><a href="">About</a></li>
-                    </ul>
-                </div>
-            </div>
+            <!--            <div class="navbar">
+                            <div class="icon">
+                                <a class="iconz" href=""><img class="iconx" src="images/logo login.png"></a>
+                                <h2 class="logo">ProjectZ</h2>
+                            </div>
+                            <div class="menu">
+                                <ul>
+                                    <li><a href="">Home</a></li>
+                                    <li>|</li>
+                                    <li><a href="/Zonas">Zonas</a>
+                                        <ul>
+                                                        <li><a href="">Playas</a></li>
+                                                        <li><a href="">Montañas</a></li>
+                                                        <li><a href="">Ciudades</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>|</li>
+                                                <li><a href="">Localidades</a></li>
+                                                <li>|</li>
+                                                <li><a href="">About</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>-->
+            
             <div class="info">
                 <section class="slices">
                     <div class="slices_img">
@@ -44,7 +57,7 @@ aaaaa
                     <div class="slices_info">
                         <h1>Playa</h1>
                         <p>Costa Rica es un país con una naturaleza increíble, una biodiversidad espectacular y un destino perfecto para los amantes de los deportes de aventura. Pero, además, también posee unas costas y playas impresionantes.<br>Con la colaboración de TUI, grupo turístico líder en el mercado, hemos hecho una selección de las diez mejores playas de Costa Rica.</p>
-                        <a href="/playa">ver mas...</a>
+                        <a href="/Playa.html">ver mas...</a>
                     </div>
                 </section>
                 <section class="slices">

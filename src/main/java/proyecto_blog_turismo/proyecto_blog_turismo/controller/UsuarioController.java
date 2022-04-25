@@ -38,7 +38,7 @@ public class UsuarioController {
     @PostMapping("/save")
     public String guardarUsuario(@ModelAttribute Usuario usuario) {
         usuarioService.saveUser(usuario);
-        return "redirect:/";
+        return "redirect:/login";
     }
 
     @GetMapping("/delete/{id}")

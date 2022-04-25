@@ -38,7 +38,7 @@
     /*height: 75px;*/
     height: 6%;
     margin: auto;
-    background: #687D19;
+    background: #37782C;
     align-items: center;
     opacity: 0.9;
 }
@@ -53,7 +53,7 @@
     font-size: 30px;
     position: absolute;
     top: 22%;
-    left: 3.8%;
+    left: 1%;
     color: white;
 }
 
@@ -132,7 +132,7 @@
 .login{
     width: 15%;
     height: 40%;
-    background: #687D19;
+    background: #37782C;
     /*background: #C5E56C;*/
     /*background: #29D0EC;*/
     /*background: #02122D;*/
@@ -155,7 +155,7 @@
 }
 
 .login_text_field{
-    border-bottom: 1px solid #C5E56C;
+    border-bottom: 1px solid #42ab30;
     width: 80%;
     height: 15%;
     margin-top: 30px;
@@ -177,7 +177,7 @@
 }
 
 .btn{
-    background: #C5E56C;
+    background: #42ab30;
     position: absolute;
     left: 30%;
     top: 50%;
@@ -187,7 +187,7 @@
 }
 
 .btn:hover{
-    background: #687D19;
+    background: #1d850c;
 }
 
 .btn a{

@@ -10,4 +10,6 @@ import proyecto_blog_turismo.proyecto_blog_turismo.entity.Usuario;
 
 @Repository
 public interface UsuarioRepository extends CrudRepository<Usuario,Long>{
+    Usuario findByNombre (String nombre);
+    Usuario findByUsername (String username);
 }

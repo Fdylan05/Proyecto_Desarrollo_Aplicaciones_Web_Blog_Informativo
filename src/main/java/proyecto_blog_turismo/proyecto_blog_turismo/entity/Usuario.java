@@ -5,26 +5,64 @@
 package proyecto_blog_turismo.proyecto_blog_turismo.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table (name="usuario")
 public class Usuario implements Serializable{
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
+    @GenericGenerator(name="native",strategy="native")
     private long id_usuario;
-    private String tipo_usuario;
+    
+    @Column
     private String username;
+    
+    @Column
     private String nombre;
+    
+    @Column
     private String apellido1;
+    
+    @Column
     private String apellido2;
+    
+    @Column
     private String fecha_nacimiento;
+    
+    @Column
     private String correo_electronico;
+    
+    @Column
     private String contrasena;
+    
+    @Transient
+    private String ConfirmaContrasena;
+    
+    /*@ManyToMany(fetch=FetchType.LAZY)
+    @JoinTable(name = "user_roles",
+            joinColumns=@JoinColumn(name="id_usuario"),
+            inverseJoinColumns=@JoinColumn(name="id_role"))
+    private Set<Roles> roles;*/
+    
+    private int active;
+    private String roles = "";
+    private String permissions = "";
 
     public long getId_usuario() {
         return id_usuario;
@@ -32,14 +70,6 @@ public class Usuario implements Serializable{
 
     public void setId_usuario(long id_usuario) {
         this.id_usuario = id_usuario;
-    }
-
-    public String getTipo_usuario() {
-        return tipo_usuario;
-    }
-
-    public void setTipo_usuario(String tipo_usuario) {
-        this.tipo_usuario = tipo_usuario;
     }
 
     public String getUsername() {
@@ -97,7 +127,43 @@ public class Usuario implements Serializable{
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public String getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
+    }
     
-    
+    public List<String> getRoleList() {
+        if (this.roles.length() > 0) {
+            return Arrays.asList(this.roles.split(","));
+        }
+        return new ArrayList<>();
+    }
+
+    public List<String> getPermissionList() {
+        if (this.permissions.length() > 0) {
+            return Arrays.asList(this.permissions.split(","));
+        }
+        return new ArrayList<>();
+    }
     
 }

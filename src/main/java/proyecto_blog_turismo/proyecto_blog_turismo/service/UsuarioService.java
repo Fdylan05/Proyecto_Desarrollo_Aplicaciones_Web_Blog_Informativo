@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import proyecto_blog_turismo.proyecto_blog_turismo.entity.Usuario;
 import proyecto_blog_turismo.proyecto_blog_turismo.repository.UsuarioRepository;
 import proyecto_blog_turismo.proyecto_blog_turismo.service.IUsuarioService;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 @Service
 public class UsuarioService implements IUsuarioService{
     
@@ -23,7 +25,10 @@ public class UsuarioService implements IUsuarioService{
     }
     
     @Override
-    public void saveUser(Usuario usuario){
+    public void saveUser(Usuario usuario){  
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(usuario.getContrasena());
+	usuario.setContrasena(encodedPassword);
         usuarioRepository.save(usuario);
     }
     
@@ -35,5 +40,15 @@ public class UsuarioService implements IUsuarioService{
      @Override
     public void delete(long id){
         usuarioRepository.deleteById(id);
+    }
+    
+    @Override
+    public Usuario findByNombre(String nombre){
+        return usuarioRepository.findByNombre(nombre);
+    }
+    
+    @Override
+    public Usuario findByUsername(String username){
+        return usuarioRepository.findByUsername(username);
     }
 }

@@ -38,7 +38,7 @@ public class ComentarioController {
     @PostMapping("/guardaComentario")
     public String guardarComentario(@ModelAttribute Comentarios comentario){
         comentarioService.saveComent(comentario);
-        return "redirect:/comentarios";
+        return "redirect:/perfilPrueba";
     }
     
     @GetMapping("/comentariosN")

@@ -10,7 +10,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-        
     </head>
     <body>
         <header th:replace="plantilla/template::header"></header>
@@ -43,6 +42,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <th:block th:each="imagen : ${imagen}">
                         <div class="col-md-4">
                             <img th:src="${imagen.getUrl}" class="img-fluid rounded-start">
+                            <input type="hidden" id="imagenreferencia" th:value="${imagen.getName}" >
                         </div>
                             </th:block>
                         <div class="col-md-8" style="overflow-y:scroll;height:400px;">
@@ -64,6 +64,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <input type="hidden" id="username" value="admin" th:field="*{username}" >
                             <script>
                                     document.getElementById("username").value = "admin";
+                                </script>
+                                <input type="hidden" id="urlComment" th:field="*{url}" >
+                                <input type="hidden" id="nameUrlComment" th:field="*{name}" >
+                                <script>
+                                        var elementovalor = document.getElementById("imagenreferencia").value;
+                                        document.getElementById("urlComment").value = "images/" + elementovalor;
+                                        document.getElementById("nameUrlComment").value = elementovalor;
                                 </script>
                             <button type="submit" class="btn btn-primary" value="Guardar">Comentar</button>
                         </form>

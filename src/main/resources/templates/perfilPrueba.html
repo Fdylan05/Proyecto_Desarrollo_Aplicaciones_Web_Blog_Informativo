@@ -13,23 +13,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
     <body>
         <div class="container">
-            <div class="navbar">
-                <div class="icon">
-                    <a class="iconz" href="home.html"
-                       ><img class="iconx" src="/images/logo.png" alt="Acávaellogo"
-                          /></a>
-                    <h2 class="logo">ProjectZ</h2>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Zones</a></li>
-                        <li><a href="">Localities</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Profile</a></li>
-                    </ul>
-                </div>
-            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="">Turistear</a></li>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/Zonas">Zonas</a></li>
+                    <li><a href="">Localidades</a></li>
+                    <li><a href="">Acerca</a></li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="">Admin</a></li>
+                    <li><a th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </nav>
 
             <div class="split left">
                 <div class="ContPP">
@@ -71,7 +65,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="col-md-8" style="overflow-y:scroll;height:600px;">
                             <th:block th:each="imagen : ${imagen}">
                                 <div class="card-body">
-                                <a th:href="@{/verComentarios/{url}(url=playa-uvita.jpg)}"><img id="pruebaimg" th:src="${imagen.getUrl}"></a>
+                                <a th:href="@{/verComentarios/{url}(url=${imagen.getName})}"><img id="pruebaimg" th:src="${imagen.getUrl}"></a>
                                     <input id="pruebaimgv" type="hidden" th:value="${imagen.getUrl}">
                             </div>
                                 </th:block>
