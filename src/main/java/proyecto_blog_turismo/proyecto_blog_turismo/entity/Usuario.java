@@ -51,8 +51,6 @@ public class Usuario implements Serializable{
     @Column
     private String contrasena;
     
-    @Transient
-    private String ConfirmaContrasena;
     
     /*@ManyToMany(fetch=FetchType.LAZY)
     @JoinTable(name = "user_roles",

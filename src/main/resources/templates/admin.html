@@ -10,30 +10,29 @@
     </head>
     <body>
         <h1 th:text="${titulo}"></h1>
+        <a href="/">Inicio</a>
         <div class="table-responsive">
+            
             <table class="table">
                 <thead class="table-success">
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Contraseña</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Eliminar</th>
+                        <th scope="col">Metodos</th>
                     </tr>
                 </thead>
-                <th:block th:each="user : ${usuarios}">
                     <tbody>
                         <tr>
-                            <td th:text="${user.getNombre}"></td>
-                            <td th:text="${user.getApellido1}"></td>
-                            <td th:text="${user.getCorreo_electronico}"></td>
-                            <td th:text="${user.getContrasena}"></td>
                             <td>
-                                <a th:href="@{/editUser/{id}(id=${user.getId_usuario})}">Edit</a>
+                                <a href="/usuarios">Modificar Usuarios</a>
                             </td>
+                        </tr>
+                        <tr>
                             <td>
-                                <a th:href="@{/deleteUser/{id}(id=${user.getId_usuario})}">Delete</a>
+                                <a href="/modificaZonas">Modificar Zonas</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/usuarios">Modificar Localidad</a>
                             </td>
                         </tr>
                     </tbody>

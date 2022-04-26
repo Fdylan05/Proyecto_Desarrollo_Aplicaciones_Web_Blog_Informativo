@@ -27,11 +27,31 @@ public class PagesController {
     
     @GetMapping("/playa")
     public String playa() {
-        return "playa";
+        return "Playa1";
+    }
+    
+    @GetMapping("/ciudad")
+    public String ciudad() {
+        return "Ciudad";
+    }
+    
+    @GetMapping("/montaña")
+    public String montaña() {
+        return "montaña";
     }
     
     @GetMapping("/perfilP")
     public String perfilP() {
         return "perfilPrueba";
+    }
+    
+    @GetMapping("/admin")
+    public String admin() {
+        return "admin";
+    }
+    
+    @GetMapping("/Zonas")
+    public String zonas() {
+        return "Zones";
     }
 }

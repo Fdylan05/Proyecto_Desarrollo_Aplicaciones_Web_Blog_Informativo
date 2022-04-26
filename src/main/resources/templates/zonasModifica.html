@@ -14,29 +14,30 @@
             <table class="table">
                 <thead class="table-success">
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Contraseña</th>
+                        <th scope="col">Zona</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Provincia</th>
+                        <th scope="col">Imagen</th>
                         <th scope="col">Editar</th>
                         <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
-                <th:block th:each="user : ${usuarios}">
+                <th:block th:each="zona : ${zonas}">
                     <tbody>
                         <tr>
-                            <td th:text="${user.getNombre}"></td>
-                            <td th:text="${user.getApellido1}"></td>
-                            <td th:text="${user.getCorreo_electronico}"></td>
-                            <td th:text="${user.getContrasena}"></td>
+                            <td th:text="${zona.getZona}"></td>
+                            <td th:text="${zona.getDescripcion}"></td>
+                            <td th:text="${zona.getProvincia}"></td>
+                            <td th:text="${zona.getImagen}"></td>
                             <td>
-                                <a th:href="@{/editUser/{id}(id=${user.getId_usuario})}">Edit</a>
+                                <a th:href="@{/editZona/{id}(id=${zona.getId_zona})}">Edit</a>
                             </td>
                             <td>
-                                <a th:href="@{/deleteUser/{id}(id=${user.getId_usuario})}">Delete</a>
+                                <a th:href="@{/deleteZona/{id}(id=${zona.getId_zona})}">Delete</a>
                             </td>
                         </tr>
                     </tbody>
+                    </th:block>
             </table>
 
         </div>

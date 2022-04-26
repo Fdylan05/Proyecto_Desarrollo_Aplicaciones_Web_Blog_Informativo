@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+--><!--
+aaaaa
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
+    <head>
+        <title>TODO supply a title</title>
+        <!--<meta charset="UTF-8">-->
+        <link rel="stylesheet" href="css/home.css"/>
+    </head>
+    <body>
+        <nav class="navbar">
+                <ul>
+                    <li><a href="">Turistear</a></li>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/Zonas">Zonas</a></li>
+                    <li><a href="/Localidades">Localidades</a></li>
+                    <li><a href="">Acerca</a></li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
+                    <li><a href="/perfilPrueba">Perfil</a></li>
+                </ul>
+            </nav>
+        <div class="container">
+            <div>
+        <th:block th:each="zona : ${zonas}">                             
+                <div >
+                    <h5 th:text="${zona.getZona}"></h5>
+                    <img th:src="${zona.getImagen}" alt="image" style="width: 100%; height: 1200px">
+                    <p th:text="${zona.getDescripcion}"></p>
+                    <p th:text="${zona.getProvincia}"></p> 
+                </div>
+            </th:block>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,45 +11,43 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/Playa.css" />
+    <link rel="stylesheet" href="css/Playa.css"/>
   </head>
   <body>
     <nav class="navbar">
-      <ul>
-        <li><img class="iconx" src="logo.png" /></li>
-        <li><h2 class="logo">ProjectZ</h2></li>
-        <li><a href="">Home</a></li>
-        <li><a href="">Zones</a></li>
-        <li><a href="">Localities</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Profile</a></li>
-        <li><img class="iconx" src="pp.png" /></li>
-      </ul>
-    </nav>
-    <h1 id="tituloPag">Beach</h1>
+                <ul>
+                    <li><a href="">Turistear</a></li>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/Zonas">Zonas</a></li>
+                    <li><a href="">Localidades</a></li>
+                    <li><a href="">Acerca</a></li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
+                    <li><a href="/perfilP">Perfil</a></li>
+                </ul>
+            </nav>
+    <h1 id="tituloPag">Ciudad</h1>
     <div class="row mb-2">
       <div class="columna">
         <div
           class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 w-75 p-3"
         >
           <div class="col-auto d-none d-lg-block">
-            <img
+            <a href="/verZona/5"><img
               class="bd-placeholder-img"
               width="250"
               height="250"
               <rect
-              width="100%"
-              src="images/image4.png"
+              src="images/museo.jpg"
               alt="Nature"
               style="width: 100%"
-            />
+            /></a>
             <!--
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
       -->
           </div>
           <div class="col p-4 d-flex flex-column position-static">
             <!-- <strong class="d-inline-block mb-2 text-primary">World</strong>-->
-            <h3 class="mb-0">Manuel Antonio</h3>
+            <h3 class="mb-0">Museo de los Niños</h3>
             <!-- <div class="mb-1 text-muted">Nov 12</div>  -->
             <!--  <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                 
@@ -66,7 +64,7 @@
         >
           <div class="col p-4 d-flex flex-column position-static">
             <!-- <strong class="d-inline-block mb-2 text-primary">World</strong>-->
-            <h3 class="mb-0">Puntarenas</h3>
+            <h3 class="mb-0">Santiago Apóstol Parish Ruins</h3>
             <!-- <div class="mb-1 text-muted">Nov 12</div>  -->
             <!--  <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                 
@@ -76,16 +74,15 @@
           <div class="col-auto d-none d-lg-block">
             <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
                 -->
-            <img
+            <a href="/verZona/4"><img
               class="bd-placeholder-img"
               width="250"
               height="250"
               <rect
-              width="100%"
-              src="images/image4.png"
+              src="images/cartagoruins.jpg"
               alt="Nature"
               style="width: 100%"
-            />
+            /></a>
           </div>
         </div>
       </div>

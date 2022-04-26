@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+    <head>
+        <title>Zonas</title>
+        <link rel="stylesheet" href="css/signup.css">
+    </head>
+    <body>
+        <section class="create">
+            <div class="titulo">Sing up</div>
+            <form th:object = "${zonas}"
+                  th:action="@{/saveZona}"
+                  method="POST"
+                  >
+                <input type="hidden" th:field="*{id_zona}">
+                <div class="form-group-row">
+                    <label for="Zona">Zona</label>
+                    <input type="text" th:field="*{zona}" id="zona" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group-row">
+                    <label for="Descripcion">Primer Apellido</label>
+                    <input type="text" th:field="*{descripcion}" id="descripcion" aria-describedby="emailHelp">   
+                </div>
+                <div class="form-group-row">
+                    <label for="Provincia">Segundo Apellido</label>
+                    <input type="text" th:field="*{provincia}" id="provincia" aria-describedby="emailHelp">   
+                </div>
+                <div class="form-group-row">
+                    <label for="Imagen">Usuario</label>
+                    <input type="text" th:field="*{imagen}" id="imagen" aria-describedby="emailHelp">   
+                </div>
+                <button type="submit" class="btn btn-primary" value="Guardar">Create</button>
+            </form>
+        </section>
+    </body>
+</html>

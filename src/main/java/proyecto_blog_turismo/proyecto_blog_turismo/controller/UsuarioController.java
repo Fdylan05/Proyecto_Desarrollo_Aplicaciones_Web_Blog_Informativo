@@ -38,21 +38,21 @@ public class UsuarioController {
     @PostMapping("/save")
     public String guardarUsuario(@ModelAttribute Usuario usuario) {
         usuarioService.saveUser(usuario);
-        return "redirect:/login";
+        return "redirect:/";
     }
 
-    @GetMapping("/delete/{id}")
+    @GetMapping ("/editUser/{id}")
+    public String editarZona(@PathVariable("id") Long idUsuario, Model model){
+        Usuario u = usuarioService.getUserById(idUsuario);
+        model.addAttribute("usuario", u);
+        return "signup.html";
+    }
+    
+    @GetMapping("/deleteUser/{id}")
     public String eliminarUsuario(@PathVariable("id") Long idUsuario) {
         usuarioService.delete(idUsuario);
-        return "redirect:/usuarios";
+        return "redirect:/signup";
     }
 
 }
-//    @GetMapping ("/editUsuario/{id}")
-//    public String editarUsuario(@PathVariable("id") Long idUsuario, Model model){
-//        Usuario u = UsuarioService.getPersonaById(idPersona);
-//        List<Usuario> listaUsuario = UsuarioService.listNombre();
-//        model.addAttribute("usuario", u);
-//        model.addAttribute("nombre", listaUsuario);
-//        return "crear";
-//    }
+    

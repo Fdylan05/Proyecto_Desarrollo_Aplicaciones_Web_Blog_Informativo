@@ -21,12 +21,12 @@ public class ZonaController {
     @Autowired
     private IZonaService zonaService;
 
-    @GetMapping("/Zonas")
+    @GetMapping("/modificaZonas")
     public String index(Model model) {
         List<Zona> listaZonas = zonaService.getAllZonas();
         model.addAttribute("titulo", "Zonas");
         model.addAttribute("zonas", listaZonas);
-        return "Zones.html";
+        return "zonasModifica.html";
     }
 
     @GetMapping("/crearZona")
@@ -38,13 +38,27 @@ public class ZonaController {
     @PostMapping("/saveZona")
     public String guardarZona(@ModelAttribute Zona zona) {
         zonaService.saveZona(zona);
-        return "redirect:/Zones.html";
+        return "redirect:/zonasModifica.html";
     }
 
     @GetMapping("/deleteZona/{id}")
     public String eliminarZona(@PathVariable("id") Long idZona) {
         zonaService.delete(idZona);
         return "redirect:/Zones.html";
+    }
+    @GetMapping ("/editZona/{id}")
+    public String editarZona(@PathVariable("id") Long idZona, Model model){
+        Zona z = zonaService.getZonaById(idZona);
+        model.addAttribute("zonas", z);
+        return "zonasedit.html";
+    }
+    
+    @GetMapping("/verZona/{id}")
+    public String indexM(@PathVariable("id") long idZona, Model model) {
+        Zona listaZona = zonaService.getZonaById(idZona);
+        model.addAttribute("titulo", "Zonas");
+        model.addAttribute("zonas", listaZona);
+        return "viewZona";
     }
     
 }

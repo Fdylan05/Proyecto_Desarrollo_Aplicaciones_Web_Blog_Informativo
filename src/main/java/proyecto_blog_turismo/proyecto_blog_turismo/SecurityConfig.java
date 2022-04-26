@@ -47,7 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/usuarios", "/delete", "/crearZona", "/saveZona", 
-                        "/deleteZona")
+                        "/deleteZona", "/admin")
                 .hasRole("ADMIN")
                 .antMatchers("/", "/perfil", "/playa", "/save", 
                         "/Zonas", "/comentarios", "/guardaComentario", 
@@ -57,7 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                     .loginPage("/login")
                     .permitAll()
-                    .defaultSuccessUrl("/")
+                    .defaultSuccessUrl("/inicio")
                     .and()
                     .csrf().disable()
                 .logout()

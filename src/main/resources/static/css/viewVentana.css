@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+
+}
+
+.navbar{
+    align-items: center;
+    
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: #37782c;
+    
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    align-items: center;
+
+}
+.navbar ul li{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 50px 0px ;
+    width: 50%;
+
+}
+
+.navbar ul li a {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.navbar ul li a{
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+
+}
+.navbar ul li a:hover{
+    background-color: #1f361b;
+    border-radius: 25px;
+    
+}
+
+.navbar ul li h2{
+    margin: 0px;
+}

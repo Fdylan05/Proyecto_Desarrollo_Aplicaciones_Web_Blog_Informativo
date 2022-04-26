@@ -15,17 +15,16 @@
   </head>
   <body>
     <nav class="navbar">
-      <ul>
-        <li><img class="iconx" src="logo.png" /></li>
-        <li><h2 class="logo">ProjectZ</h2></li>
-        <li><a href="">Home</a></li>
-        <li><a href="">Zones</a></li>
-        <li><a href="">Localities</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Profile</a></li>
-        <li><img class="iconx" src="pp.png" /></li>
-      </ul>
-    </nav>
+                <ul>
+                    <li><a href="">Turistear</a></li>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/Zonas">Zonas</a></li>
+                    <li><a href="">Localidades</a></li>
+                    <li><a href="">Acerca</a></li>
+                    <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
+                    <li><a href="/perfilPrueba">Perfil</a></li>
+                </ul>
+            </nav>
     <h1 id="tituloPag">Zones</h1>
     <p id="descripcion">Looking for a great place to visit? Check out this amazing zones in our country</p>
     <div class="container">
@@ -37,9 +36,8 @@
               <div class="caption">
                 <p>Beach</p>
               </div>
-            </a href="">
               <div class="divRead">
-                <a href="Images.html"> <p class="read">Read More</p> </a>
+                <a href="/playa"><p class="read">Read More</p> </a>
               </div>
           </div>
         </div>
@@ -52,7 +50,7 @@
               </div>
             </a>
             <div class="divRead">
-                <a href="Images.html"> <p class="read">Read More</p> </a>
+                <a href="/ciudad"> <p class="read">Read More</p> </a>
               </div>
           </div>
         </div>
@@ -65,7 +63,7 @@
               </div>
             </a>
             <div class="divRead">
-                <a href="Images.html"> <p class="read">Read More</p> </a>
+                <a href="/montaña"> <p class="read">Read More</p> </a>
               </div>
           </div>
         </div>
